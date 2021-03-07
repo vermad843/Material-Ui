@@ -7,6 +7,7 @@ import SaveIcon from "@material-ui/icons/Save";
 import DeleteIcon from "@material-ui/icons/Delete";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import TextField from "@material-ui/core/TextField";
 
 
 function CheckboxExample() {
@@ -30,6 +31,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TextField
+           variant = "outlined"
+           color = "secondary"
+          //  type ="date"
+           type = "email"
+           label = "The Date"
+           placeholder = "test@test.com"
+        />
         <CheckboxExample/>
         <ButtonGroup variant = "contained" color="primary">
            <Button
