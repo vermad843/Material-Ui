@@ -11,7 +11,10 @@ import TextField from "@material-ui/core/TextField";
 
 import { makeStyles , ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { green ,orange } from "@material-ui/core/colors";
+import 'fontsource-roboto';
 
+import Typography from "@material-ui/core/Typography"
+import Container from "@material-ui/core/Container"
 
 const useStyles = makeStyles({
   root : {
@@ -30,6 +33,11 @@ function ButtonStyled() {
 }
 
 const theme = createMuiTheme({
+  typography: {
+    h2: {
+      fontSize : 36,
+    }
+  },
   palette : {
     primary : {
       main : green[400],
@@ -60,9 +68,15 @@ function CheckboxExample() {
 
 function App() {
   return (
-    <ThemeProvider theme = {theme}>
+  <ThemeProvider theme = {theme}>
     <div className="App">
       <header className="App-header">
+        <Typography variant="h2" component="div">
+           welcome to MUI
+        </Typography>
+        <Typography variant="subtitle1">
+           Learn how to use Material UI
+        </Typography>
         <ButtonStyled/>
         <TextField
            variant = "outlined"
