@@ -94,14 +94,14 @@ function App() {
            Learn how to use Material UI
         </Typography>
         <ButtonStyled/>
-        {/* <TextField
+        <TextField
            variant = "outlined"
            color = "secondary"
           //  type ="date"
            type = "email"
            label = "The Date"
            placeholder = "test@test.com"
-        /> */}
+        />
         <Grid container spacing={2} justify="center">
           <Grid item>
              <Paper style={{height : 75, width: 50, }}/>
