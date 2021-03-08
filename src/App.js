@@ -18,6 +18,11 @@ import Container from "@material-ui/core/Container"
 import Paper from "@material-ui/core/Paper"
 import Grid from "@material-ui/core/Grid"
 
+import AppBar from "@material-ui/core/AppBar"
+import Toolbar from "@material-ui/core/Toolbar"
+import IconButton from "@material-ui/core/IconButton"
+import MenuIcon from "@material-ui/core/Menu"
+
 
 
 const useStyles = makeStyles({
@@ -31,6 +36,7 @@ const useStyles = makeStyles({
   }
 })
 
+
 function ButtonStyled() {
   const classes = useStyles();
   return <Button className={classes.root}>Test Styled</Button>
@@ -40,14 +46,6 @@ const theme = createMuiTheme({
   typography: {
     h2: {
       fontSize : 36,
-    }
-  },
-  palette : {
-    primary : {
-      main : green[400],
-    },
-    secondary : {
-       main : orange[400],
     }
   }
 })
@@ -73,9 +71,22 @@ function CheckboxExample() {
 function App() {
   return (
   <ThemeProvider theme = {theme}>
-    <Container maxWidth = "xs">
+    <Container>
     <div className="App">
       <header className="App-header">
+        <AppBar color="secondary">
+           <Toolbar>
+              <IconButton>
+                  <MenuIcon/>
+              </IconButton>
+              <Typography variant="h6">
+                  MUI Themeing
+              </Typography>
+              <Button>
+                 Login
+              </Button>
+           </Toolbar>
+        </AppBar>
         <Typography variant="h2" component="div">
            welcome to MUI
         </Typography>
